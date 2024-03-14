@@ -16,7 +16,7 @@ export const fetchProducts = async () => {
 export const getProductDetails = async (id) => {
     try {
         const response = await axios.get(`${BASE_URL}/${id}`);
-        return response.data.products.find(product => product.id === id);
+        return response.data;
     } catch (error) {
         throw error;
     }
